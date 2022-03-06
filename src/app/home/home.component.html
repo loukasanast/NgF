@@ -14,8 +14,8 @@
             <td>{{ team.name }}</td>
             <td>{{ team.city }}</td>
             <td>{{ team.year }}</td>
-            <td class="cell-btn"><a class="btn btn-primary" routerLink="/update/{{ team._id }}">Update</a></td>
-            <td class="cell-btn"><button class="btn btn-danger" (click)="delete($event, team._id)" type="button">Delete</button></td>
+            <td class="cell-btn"><a class="btn btn-primary" routerLink="/update/{{ team._id }}"><span class="material-icons">edit</span></a></td>
+            <td class="cell-btn"><button class="btn btn-danger" (click)="delete($event, team._id)" type="button"><span class="material-icons">delete</span></button></td>
         </tr>
     </tbody>
 </table>
