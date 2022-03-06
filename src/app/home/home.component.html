@@ -1,0 +1,22 @@
+<h3>Soccer Teams</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Year</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let team of teams">
+            <td>{{ team.name }}</td>
+            <td>{{ team.city }}</td>
+            <td>{{ team.year }}</td>
+            <td><a routerLink="/update/{{ team._id }}">Update</a></td>
+            <td><button (click)="delete($event, team._id)" type="button">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+<a routerLink="/add">Add new team</a>

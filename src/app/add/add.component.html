@@ -1,0 +1,21 @@
+<h3>Add new team</h3>
+<form (submit)="add($event)">
+    <table>
+        <tbody>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" [(ngModel)]="name" name="name" /></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input type="text" [(ngModel)]="city" name="city" /></td>
+            </tr>
+            <tr>
+                <td>Year:</td>
+                <td><input type="text" [(ngModel)]="year" name="year" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="submit">Add</button>
+</form>
+<a routerLink="/">Back to home</a>
