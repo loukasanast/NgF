@@ -29,12 +29,17 @@ export class HomeComponent implements OnInit {
   }
 
   delete(e, id) {
+    let elem;
     this.http.delete('http://localhost:3001/api/teams/' + id).pipe(
       retry(1),
       catchError((this.handleError))
     ).subscribe((data: any) => {
-      const parent = e.target.parentNode.parentNode.parentNode;
-      parent.removeChild(e.target.parentNode.parentNode);
+      if(e.target.nodeName === 'SPAN') {
+        elem = e.target.parentNode.parentNode.parentNode;
+      } else if(e.target.nodeName === 'BUTTON'){
+        elem = e.target.parentNode.parentNode;
+      } 
+      elem.parentNode.removeChild(elem);
     });
   }
 
