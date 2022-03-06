@@ -1,21 +1,21 @@
 <h3>Update team</h3>
 <form (submit)="update($event)">
-    <table>
+    <table class="table table-striped">
         <tbody>
-            <tr>
+            <tr class="form-group">
                 <td>Name:</td>
-                <td><input type="text" [(ngModel)]="name" name="name" /></td>
+                <td><input class="form-control" type="text" [(ngModel)]="name" name="name" /></td>
             </tr>
-            <tr>
+            <tr class="form-group">
                 <td>City:</td>
-                <td><input type="text" [(ngModel)]="city" name="city" /></td>
+                <td><input class="form-control" type="text" [(ngModel)]="city" name="city" /></td>
             </tr>
-            <tr>
+            <tr class="form-group">
                 <td>Year:</td>
-                <td><input type="text" [(ngModel)]="year" name="year" /></td>
+                <td><input class="form-control" type="text" [(ngModel)]="year" name="year" /></td>
             </tr>
         </tbody>
     </table>
-    <button type="submit">Update</button>
+    <button class="btn btn-success my-2" type="submit">Update</button>
 </form>
 <a routerLink="/">Back to home</a>

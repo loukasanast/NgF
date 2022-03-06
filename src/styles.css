@@ -1,8 +1,0 @@
-th, td{
-    min-width:150px;
-    height:30px;
-    text-align:left;
-}
-tr:nth-child(even){
-    background:lightgrey;
-}
